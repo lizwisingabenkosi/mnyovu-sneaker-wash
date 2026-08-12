@@ -31,4 +31,78 @@ footer{background:#061936;color:#cbd6ea;padding:35px 7vw;display:flex;justify-co
   max-height: none;
   object-fit: contain;
   display: block;
+} 
+
+/* Mnyovu Brand Upgrade */
+
+.hero {
+  background: linear-gradient(135deg, #071f4b, #12346f);
+}
+
+.eyebrow {
+  color: #c71924;
+  letter-spacing: 3px;
+}
+
+.btn-primary {
+  background: #c71924;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #071f4b;
+}
+
+.btn-secondary {
+  border-color: #c71924;
+  color: #071f4b;
+}
+
+footer {
+  background: #071f4b;
+}
+
+footer::after {
+  content: "We've got you covered. Manje clean!!";
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
+
+/* Mnyovu Brand Finish */
+
+footer::after {
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+h2 {
+  color: #071f4b;
+  font-weight: 900;
+}
+
+.section-title .eyebrow {
+  color: #c71924;
+}
+
+.btn {
+  border-radius: 12px;
+  font-weight: 800;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
+
+.btn-secondary:hover {
+  background: #071f4b;
+  color: white;
 }
