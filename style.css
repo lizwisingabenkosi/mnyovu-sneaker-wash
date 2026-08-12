@@ -18,3 +18,12 @@ footer{background:#061936;color:#cbd6ea;padding:35px 7vw;display:flex;justify-co
 
 @media(max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.hero-image{max-width:650px}.intro,.price-panel{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.topbar{padding:10px 18px}.menu-btn{display:block}.nav{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:18px;flex-direction:column;gap:16px}.nav.open{display:flex}.hero{padding:50px 22px;gap:35px}.hero h1{font-size:48px}.hero-image img{height:420px}.section{padding:65px 22px}.cards,.gallery,.steps{grid-template-columns:1fr}.intro{gap:20px}.contact-card{padding:28px;flex-direction:column;align-items:flex-start}footer{padding:28px 22px;flex-direction:column}.brand small{font-size:8px}}
+
+
+/* Fix before & after images */
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
