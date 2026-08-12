@@ -1,141 +1,475 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Mnyovu's Sneaker Wash & Shoe Care — professional sneaker cleaning, polishing, respraying and restoration in Jeppestown, Johannesburg.">
-  <meta name="theme-color" content="#071f4b">
-  <title>Mnyovu's Sneaker Wash & Shoe Care | Johannesburg</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Mnyovu's Sneaker Wash & Shoe Care — professional sneaker cleaning, shoe cleaning, restoration and care.">
+
+  <title>Mnyovu's Sneaker Wash & Shoe Care</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+      color: #14213d;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #071f4b;
+      color: white;
+      padding: 18px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 3px 12px rgba(0,0,0,.15);
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: white;
+      color: #071f4b;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 17px;
+    }
+
+    .brand small {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 1px;
+      opacity: .8;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      opacity: .7;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #071f4b, #0b5cad);
+      color: white;
+      padding: 90px 20px;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: bold;
+      opacity: .8;
+    }
+
+    h1 {
+      font-size: clamp(40px, 8vw, 72px);
+      line-height: 1.05;
+      margin: 15px 0 20px;
+    }
+
+    h1 span {
+      display: block;
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 18px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #071f4b;
+    }
+
+    .btn-secondary {
+      border: 2px solid white;
+      color: white;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 75px 20px;
+    }
+
+    .section-title {
+      margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-top: 5px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 16px;
+      background: #ddd;
+    }
+
+    .prices {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .price-box {
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    }
+
+    .price {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 0;
+      border-bottom: 1px solid #ddd;
+      gap: 10px;
+    }
+
+    .price:last-child {
+      border-bottom: none;
+    }
+
+    .contact {
+      background: #071f4b;
+      color: white;
+      max-width: none;
+    }
+
+    .contact-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 75px 20px;
+    }
+
+    footer {
+      background: #04142f;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    @media (max-width: 750px) {
+      nav {
+        display: none;
+      }
+
+      .cards,
+      .gallery,
+      .prices {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 65px 20px;
+      }
+
+      h1 {
+        font-size: 45px;
+      }
+
+      .gallery img {
+        height: 230px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <header class="topbar">
-    <a class="brand" href="#home" aria-label="Mnyovu's Sneaker Wash home">
+
+<header>
+  <div class="nav">
+
+    <a class="brand" href="#home">
       <span class="brand-mark">M</span>
-      <span><strong>MNYOVU'S</strong><small>SNEAKER WASH & SHOE CARE</small></span>
+      <span>
+        <strong>MNYOVU'S</strong>
+        <small>SNEAKER WASH & SHOE CARE</small>
+      </span>
     </a>
-    <button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
-    <nav class="nav">
+
+    <nav>
       <a href="#services">Services</a>
       <a href="#work">Our Work</a>
       <a href="#prices">Prices</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
 
-  <main id="home">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">QUALITY CLEAN. FRESH LOOK.</p>
-        <h1>We bring your <span>sneakers back to life.</span></h1>
-        <p class="lead">Professional sneaker washing, polishing, respraying and restoration in Jeppestown, Johannesburg.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" id="whatsappHero" href="#" target="_blank" rel="noopener">Book on WhatsApp</a>
-          <a class="btn btn-light" href="#prices">View prices</a>
-        </div>
-        <div class="trust-row">
-          <span>✓ Affordable prices</span>
-          <span>✓ Premium quality</span>
-          <span>✓ Fast & reliable</span>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="assets/before-after-sneakers.jpg" alt="Before and after sneaker cleaning by Mnyovu's Sneaker Wash">
-      </div>
-    </section>
+  </div>
+</header>
 
-    <section class="section intro">
-      <div>
-        <p class="eyebrow">MNYOVU'S SNEAKER WASH</p>
-        <h2>Clean shoes. Fresh confidence.</h2>
-      </div>
-      <p>Whether your pair needs a deep clean or a full restoration, Mnyovu's offers practical shoe-care services with a professional finish. Walk-ins are welcome, and drop-off & pick-up are available.</p>
-    </section>
 
-    <section class="section" id="services">
-      <div class="section-heading">
-        <p class="eyebrow">WHAT WE DO</p>
-        <h2>Services</h2>
-      </div>
-      <div class="cards">
-        <article class="card"><div class="icon">✦</div><h3>Basic Sneaker Wash</h3><p>Deep clean, laces & fresh finish.</p><strong>R80</strong></article>
-        <article class="card"><div class="icon">✧</div><h3>Basic Shoe Cleaning (Polish)</h3><p>Polish & shine for a fresh look.</p><strong>R80</strong></article>
-        <article class="card"><div class="icon">↻</div><h3>Arbiter</h3><p>Professional respray & refinishing.</p><strong>R120</strong></article>
-        <article class="card"><div class="icon">◈</div><h3>Carvella (Respray)</h3><p>Premium respray & colour refresh.</p><strong>R180</strong></article>
-        <article class="card"><div class="icon">✎</div><h3>Dye & Restoration</h3><p>Full colour change & restoration.</p><strong>R250</strong></article>
-      </div>
-      <p class="small-note">Prices shown are from the supplied 2026 price list. Confirm final pricing with Mnyovu before changing the website.</p>
-    </section>
+<main id="home">
 
-    <section class="section work" id="work">
-      <div class="section-heading">
-        <p class="eyebrow">REAL RESULTS</p>
-        <h2>Before & after</h2>
-        <p>Examples supplied by Mnyovu's Sneaker Wash.</p>
-      </div>
-      <div class="gallery">
-        <figure><img src="assets/before-after-black.jpg" alt="Before and after black shoe restoration"><figcaption>Black shoe restoration</figcaption></figure>
-        <figure><img src="assets/before-after-red.jpg" alt="Before and after red shoe restoration"><figcaption>Colour restoration</figcaption></figure>
-        <figure><img src="assets/before-after-sneakers.jpg" alt="Before and after sneaker cleaning"><figcaption>Sneaker deep clean</figcaption></figure>
-      </div>
-    </section>
+  <section class="hero">
+    <div class="hero-inner">
 
-    <section class="section prices" id="prices">
-      <div class="price-panel">
-        <div>
-          <p class="eyebrow">PROFESSIONAL CARE</p>
-          <h2>Simple pricing.</h2>
-          <p>Choose the service your pair needs, then send a photo on WhatsApp for a quick assessment.</p>
-          <a class="btn btn-primary" id="whatsappPrice" href="#" target="_blank" rel="noopener">Send a shoe photo</a>
-        </div>
-        <div class="price-list">
-          <div><span>Basic Sneaker Wash</span><b>R80</b></div>
-          <div><span>Basic Shoe Cleaning (Polish)</span><b>R80</b></div>
-          <div><span>Arbiter</span><b>R120</b></div>
-          <div><span>Carvella (Respray)</span><b>R180</b></div>
-          <div><span>Dye & Restoration</span><b>R250</b></div>
-        </div>
-      </div>
-    </section>
+      <p class="eyebrow">Professional Shoe Care</p>
 
-    <section class="section process">
-      <div class="section-heading">
-        <p class="eyebrow">HOW IT WORKS</p>
-        <h2>From dirty to fresh.</h2>
-      </div>
-      <div class="steps">
-        <div><span>01</span><h3>Send a photo</h3><p>Show us the pair and tell us what you need.</p></div>
-        <div><span>02</span><h3>Drop off</h3><p>Bring your shoes to the Jeppestown location.</p></div>
-        <div><span>03</span><h3>We restore</h3><p>We clean, polish or restore according to the service.</p></div>
-        <div><span>04</span><h3>Pick up</h3><p>Collect your fresh pair when it's ready.</p></div>
-      </div>
-    </section>
+      <h1>
+        We bring your
+        <span>sneakers back to life.</span>
+      </h1>
 
-    <section class="section contact" id="contact">
-      <div class="contact-card">
-        <div>
-          <p class="eyebrow">COME THROUGH</p>
-          <h2>Visit Mnyovu's.</h2>
-          <p><strong>34 Macintyre Street, Jeppestown, Johannesburg</strong></p>
-          <p>Walk-ins welcome · Drop-off & pick-up available</p>
-        </div>
-        <div class="contact-actions">
-          <a class="btn btn-primary" id="whatsappContact" href="#" target="_blank" rel="noopener">WhatsApp us</a>
-          <a class="btn btn-outline" href="https://www.instagram.com/mnyovus_sneakerwash/" target="_blank" rel="noopener">Instagram</a>
-        </div>
-      </div>
-      <div class="map-note">📍 Jeppestown · Johannesburg, South Africa</div>
-    </section>
-  </main>
+      <p>
+        Professional sneaker washing, shoe cleaning,
+        restoration and care by Mnyovu's Sneaker Wash.
+      </p>
 
-  <footer>
-    <div>
-      <strong>MNYOVU'S SNEAKER WASH & SHOE CARE</strong>
-      <p>We've got you covered, manje clean!!</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#prices">View Prices</a>
+        <a class="btn btn-secondary" href="#contact">Contact Us</a>
+      </div>
+
     </div>
-    <p>© 2026 Mnyovu's Sneaker Wash. All rights reserved.</p>
-  </footer>
+  </section>
 
-  <script src="script.js"></script>
+
+  <section id="services">
+
+    <div class="section-title">
+      <p class="eyebrow">What We Do</p>
+      <h2>Professional care for your shoes.</h2>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>👟 Sneaker Wash</h3>
+        <p>
+          Deep cleaning to remove dirt, stains and everyday buildup
+          while helping your sneakers look fresh again.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>✨ Shoe Cleaning</h3>
+        <p>
+          Detailed cleaning and polishing for different types of
+          shoes and materials.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🔧 Restoration</h3>
+        <p>
+          Care and restoration for shoes that need more than
+          an ordinary clean.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="work">
+
+    <div class="section-title">
+      <p class="eyebrow">Real Results</p>
+      <h2>Before & After</h2>
+      <p>Examples of sneaker cleaning and restoration work.</p>
+    </div>
+
+    <div class="gallery">
+
+      <img src="before-after-black.jpg" alt="Before and after sneaker cleaning">
+
+      <img src="before-after-red.jpg" alt="Before and after red sneaker cleaning">
+
+      <img src="before-after-sneakers.jpg" alt="Before and after sneaker restoration">
+
+    </div>
+
+  </section>
+
+
+  <section id="prices">
+
+    <div class="section-title">
+      <p class="eyebrow">Professional Care</p>
+      <h2>Simple pricing.</h2>
+      <p>Choose the service your pair needs.</p>
+    </div>
+
+    <div class="prices">
+
+      <div class="price-box">
+
+        <div class="price">
+          <span>Basic Sneaker Wash</span>
+          <strong>R80</strong>
+        </div>
+
+        <div class="price">
+          <span>Basic Shoe Cleaning</span>
+          <strong>R100</strong>
+        </div>
+
+        <div class="price">
+          <span>Arbiter</span>
+          <strong>R120</strong>
+        </div>
+
+        <div class="price">
+          <span>Carvela (Respray)</span>
+          <strong>R180</strong>
+        </div>
+
+        <div class="price">
+          <span>Dye & Restoration</span>
+          <strong>R250</strong>
+        </div>
+
+      </div>
+
+      <div class="price-box">
+        <h3>Need a quote?</h3>
+        <p>
+          Send us a picture of your shoes and ask about
+          the best cleaning or restoration option.
+        </p>
+
+        <div class="buttons">
+          <a class="btn btn-primary" href="#contact">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <div class="contact" id="contact">
+
+    <div class="contact-inner">
+
+      <p class="eyebrow">Let's Talk</p>
+
+      <h2>Ready to give your shoes a fresh look?</h2>
+
+      <p>
+        Contact Mnyovu's Sneaker Wash & Shoe Care
+        for bookings, questions and quotes.
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-primary" href="https://wa.me/" target="_blank">
+          WhatsApp Us
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+<footer>
+
+  <strong>MNYOVU'S SNEAKER WASH & SHOE CARE</strong>
+
+  <p>Quality clean. Fresh look.</p>
+
+  <small>© 2026 Mnyovu's Sneaker Wash. All rights reserved.</small>
+
+</footer>
+
 </body>
 </html>
