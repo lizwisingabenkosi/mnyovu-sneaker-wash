@@ -1,6 +1,10 @@
 :root{
-  --navy:#071f4b;--navy2:#12346f;--red:#c71924;--blue:#159fe6;
-  --ink:#13213a;--muted:#647089;--paper:#fff;--soft:#f5f7fb;--line:#e5e9f1;
+  --navy:#071f4b;
+  --navy2:#061936;
+  --red:#c71924;
+  --ink:#13213a;
+  --muted:#647089;
+  --paper:#ffffff;
 }
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.55}
 a{text-decoration:none;color:inherit}.topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:12px 5vw}
@@ -36,8 +40,9 @@ footer{background:#061936;color:#cbd6ea;padding:35px 7vw;display:flex;justify-co
 /* Mnyovu Brand Upgrade */
 
 .hero {
-  background: linear-gradient(135deg, #061936, #c71924); 
-}
+  background: linear-gradient(135deg, #ffffff, #eef3ff);
+  color: #071f4b;
+} 
 
 .eyebrow {
   color: #c71924;
@@ -45,17 +50,12 @@ footer{background:#061936;color:#cbd6ea;padding:35px 7vw;display:flex;justify-co
 }
 
 .btn-primary {
-  background: #c71924;
-  color: white;
+  background:#071f4b;
+  color:white;
 }
 
 .btn-primary:hover {
-  background: #071f4b;
-}
-
-.btn-secondary {
-  border-color: #c71924;
-  color: #071f4b;
+  background:#c71924;
 }
 
 footer {
