@@ -31,18 +31,26 @@ footer{background:#061936;color:#cbd6ea;padding:35px 7vw;display:flex;justify-co
 
 /* Before & After gallery */
 .gallery {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.gallery .card {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
 }
 
 .gallery img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  object-fit: contain;
-  border-radius: 20px;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center;
+    border-radius: 20px;
 }
 .contact-inner a {
   color: inherit;
