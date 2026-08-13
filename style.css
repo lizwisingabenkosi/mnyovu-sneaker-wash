@@ -52,3 +52,7 @@ footer{background:#061936;color:#cbd6ea;padding:35px 7vw;display:flex;justify-co
 .contact-inner a:hover {
   color: #e51b23;
 }
+.contact-inner a {
+  color: inherit !important;
+  text-decoration: none !important;
+                        }
