@@ -44,3 +44,11 @@ footer{background:#061936;color:#cbd6ea;padding:35px 7vw;display:flex;justify-co
   object-fit: contain;
   border-radius: 20px;
 }
+.contact-inner a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-inner a:hover {
+  color: #e51b23;
+}
